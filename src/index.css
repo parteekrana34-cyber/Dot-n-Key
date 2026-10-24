@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-hand: "Caveat", cursive;
+  
+  --color-pastel-pink: #F9DDE5;
+  --color-soft-blush: #FCEEF2;
+  --color-pure-white: #FFFFFF;
+  --color-coral-pink: #FF8C9A;
+  --color-coral-pink-hover: #FF7586;
+  --color-dark-rose: #633D4B;
+  --color-dark-rose-light: #8E6B78;
+  --color-pink-border: #F5D5DE;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    font-family: var(--font-sans);
+    color: #633D4B;
+    background-color: #FCEEF2;
+  }
+  
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+    color: #633D4B;
+  }
+}
+
+/* Custom glow and pastel soft shadows for Korean skincare aesthetic */
+.shadow-soft {
+  box-shadow: 0 4px 20px -2px rgba(255, 140, 154, 0.12), 0 2px 6px -1px rgba(99, 61, 75, 0.04);
+}
+
+.shadow-card {
+  box-shadow: 0 8px 30px -4px rgba(99, 61, 75, 0.06), 0 2px 8px -2px rgba(99, 61, 75, 0.03);
+}
+
+.shadow-card-hover {
+  box-shadow: 0 16px 36px -6px rgba(255, 140, 154, 0.22), 0 4px 12px -2px rgba(99, 61, 75, 0.06);
+}
+
+.shadow-coral {
+  box-shadow: 0 10px 25px -3px rgba(255, 140, 154, 0.35), 0 4px 10px -2px rgba(255, 140, 154, 0.2);
+}
+
+/* Shimmer animation for badges & offers */
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 3s infinite ease-in-out;
+}
+
+/* Custom scrollbars in pastel pink tone */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FCEEF2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F5CAD4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF8C9A;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 14s linear infinite;
+}
+
+/* Continuous smooth moving marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle gentle floating animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 3.5s ease-in-out infinite;
+}
+
+@keyframes floatGentleReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(6px) rotate(1deg);
+  }
+}
+
+.animate-float-reverse {
+  animation: floatGentleReverse 4s ease-in-out infinite;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "PAYORA JEWELS - Luxury & Fine Jewellery",
+  "description": "Discover timeless handcrafted jewellery designed to make every moment shine. Ethical 18k gold, certified diamonds, and bespoke artisanal treasures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
